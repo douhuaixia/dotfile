@@ -1,0 +1,50 @@
+#
+# Command aliases
+#
+
+alias ls='ls --color'
+alias :sp='test -n "$TMUX" && tmux split-window'
+alias :vs='test -n "$TMUX" && tmux split-window -h'
+alias e=exit
+alias h=history
+alias ll='ls -laF'
+alias t=tmux
+alias v=vim
+alias gl='git log --graph --pretty=oneline --abbrev-commit'
+alias gc='git commit'
+alias gm='git merge --no-ff'
+alias tree='tree -a -C'
+
+if command -v nvim &> /dev/null; then
+  alias vim=nvim # Use `\vim` or `command vim` to get the real vim.
+fi
+
+#
+# Suffix aliases
+# (eg. "foo.md" to open Markdown files in "Marked 2.app")
+#
+alias -s md='open -a "Marked 2.app"'
+
+#
+# Global aliases
+# (work at any position within the command line)
+#
+
+# Mnemonic: "[C]lip"
+alias -g C="|clip"
+
+# Mnemonic: "[G]rep"
+alias -g G="|grep"
+
+# Mnemonic: "[H]ead"
+alias -g H="|head"
+
+# Pretty-print JSON.
+# Mnemonic: "[J]SON"
+alias -g J="|python -m json.tool"
+
+# Mnemonic: "[L]ess"
+alias -g L="|less"
+
+# Mnemonic: "[R]eset"
+alias -g R=";clear;test -n "$TMUX" && tmux clear-history;"
