@@ -201,6 +201,8 @@ inoremap <return> <C-R>=Ulti_ExpandOrEnter()<CR>
 nnoremap <leader>y :let g:ycm_auto_trigger=0<CR>                " turn off YCM
 nnoremap <leader>Y :let g:ycm_auto_trigger=1<CR>                "turn on YCM
 
+set foldlevelstart=99  
+"刚打开文件不设置折叠
 
 
 
