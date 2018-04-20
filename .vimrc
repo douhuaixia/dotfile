@@ -36,6 +36,8 @@ Plugin 'Valloric/YouCompleteMe'
 
 Plugin 'kristijanhusak/vim-carbon-now-sh'
 
+Plugin 'vim-scripts/DrawIt'
+
 "每个插件都应该在这一行之前  
 
 call vundle#end()            " required 
@@ -97,7 +99,9 @@ nnoremap <Leader>p :r!xclip -selection c -o<CR>
 
 "highlight Visual ctermfg=81 guifg=#66D9EF
 "highlight Visual term=reverse ctermbg=9 gui=undercurl guisp=Red
-highlight Visual term=bold,reverse ctermfg=240 ctermbg=230 guifg=#455354 guibg=#F8F8F2 guisp=#F8F8F2 
+"highlight Visual term=bold,reverse ctermfg=240 ctermbg=230 guifg=#455354 guibg=#F8F8F2 guisp=#F8F8F2 
+
+highlight Visual term=bold cterm=bold ctermfg=232 ctermbg=160 gui=bold guifg=#000000 guibg=#990000
 
 
 set mouse=a
