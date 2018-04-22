@@ -1,0 +1,7 @@
+我的电脑上安装了2个ruby版本 通过rbenv来管理， 详情rbenv -h
+到command-t目录下指定ruby版本 
+rbenv local 2.3.1
+ruby 某某.ruby
+make
+
+之后使用ruby时注意版本问题
