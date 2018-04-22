@@ -124,6 +124,14 @@ nnoremap <F6> :YcmForceCompileAndDiagnostics<CR>	"force recomile with syntastic
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 
 
+"避免使用<c-z>
+let g:ycm_semantic_triggers =  {
+			\ 'c,cpp,python,java,go,erlang,perl': ['re!\w{2}'],
+			\ 'cs,lua,javascript': ['re!\w{2}'],
+			\ }
+"关闭代码自动检查， 不然vim出现奇怪现象
+let g:ycm_show_diagnostics_ui = 0
+
 " 不显示开启vim时检查ycm_extra_conf文件的信息  
 let g:ycm_confirm_extra_conf=0
 " 开启基于tag的补全，可以在这之后添加需要的标签路径  
@@ -149,7 +157,7 @@ let g:ycm_filetype_blacklist = {
 let g:ycm_key_list_select_completion = ['<Down>']
 let g:ycm_key_list_previous_completion = ['<Up>']
 " 修改对C函数的补全快捷键，默认是CTRL + space，修改为ALT + ;
-let g:ycm_key_invoke_completion = '<M-;>'
+let g:ycm_key_invoke_completion = '<c-z>'
 
 " SirVer/ultisnips 代码片断
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
