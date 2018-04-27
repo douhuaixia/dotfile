@@ -2,6 +2,10 @@ set nobackup
 set noswapfile
 set noundofile
 set ignorecase
+
+"tags文件生成位置为~/tags文件夹
+"cscope文件也在该文件夹下
+
 nmap<C-n> :cnext<CR>
 nmap<C-p> :cprev<CR>
 
@@ -118,6 +122,7 @@ nnoremap <Leader>p :r!xclip -selection c -o<CR>
 "highlight Visual term=bold,reverse ctermfg=240 ctermbg=230 guifg=#455354 guibg=#F8F8F2 guisp=#F8F8F2 
 
 highlight Visual term=bold cterm=bold ctermfg=232 ctermbg=160 gui=bold guifg=#000000 guibg=#990000
+highlight Search term=bold cterm=bold ctermfg=232 ctermbg=160 gui=bold guifg=#000000 guibg=#990000
 
 
 set mouse=a
@@ -252,3 +257,8 @@ nmap <leader>d :cs find d <C-R>=expand("<cword>")<CR><CR>
 
 "使用quickfix窗口来显示cscope结果
 set cscopequickfix=s-,c-,d-,i-,t-,e-
+
+
+
+
+
