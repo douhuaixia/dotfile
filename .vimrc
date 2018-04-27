@@ -2,6 +2,22 @@ set nobackup
 set noswapfile
 set noundofile
 set ignorecase
+nmap<C-n> :cnext<CR>
+nmap<C-p> :cprev<CR>
+
+
+"taglist
+let Tlist_Show_One_File=1
+let Tlist_Exit_OnlyWindow=1
+
+"解决中文乱码问题
+set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
+
+" set F3 as the shortcut key to toogle :Tlist  
+nnoremap <silent> <F3> :TlistToggle<CR> 
+
+"set F2 as the shortcut key to nerdtree
+nnoremap <silent> <F2> :NERDTree<CR>
 
 " 你在此设置运行时路径 
 set rtp+=~/.vim/bundle/Vundle.vim  
@@ -37,7 +53,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'kristijanhusak/vim-carbon-now-sh'
 
 Plugin 'vim-scripts/DrawIt'
-
+Plugin 'vim-scripts/taglist.vim'
 "每个插件都应该在这一行之前  
 
 call vundle#end()            " required 
@@ -70,8 +86,8 @@ set smarttab
 "==========================================
 
 let g:airline_powerline_fonts = 1
-nnoremap <C-N> :bn<CR>
-nnoremap <C-P> :bp<CR>
+"nnoremap <C-N> :bn<CR>
+"nnoremap <C-P> :bp<CR>
 let g:airline#extensions#tabline#enabled = 1
 "==========================================
 
@@ -86,7 +102,7 @@ let g:airline_theme='lucius'
 "map
 nnoremap <Leader><Leader> <C-^>
 nnoremap <leader>o :only<CR>
-nnoremap <Leader>p :echo expand('%')<CR>
+"nnoremap <Leader>p :echo expand('%')<CR>
 nnoremap <Leader>q :quit<CR>
 nnoremap <Leader>w :write<CR>
 nnoremap <C-h> <C-w>h
@@ -218,6 +234,21 @@ set foldlevelstart=99
 "刚打开文件不设置折叠
 
 
+nmap <leader>s :cs find s <C-R>=expand("<cword>")<CR><CR>
 
+nmap <leader>g :cs find g <C-R>=expand("<cword>")<CR><CR>
 
+nmap <leader>c :cs find c <C-R>=expand("<cword>")<CR><CR>
 
+"nmap <leader>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+
+nmap <leader>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+
+nmap <leader>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+
+nmap <leader>i :cs find i <C-R>=expand("<cfile>")<CR><CR>
+
+nmap <leader>d :cs find d <C-R>=expand("<cword>")<CR><CR>
+
+"使用quickfix窗口来显示cscope结果
+set cscopequickfix=s-,c-,d-,i-,t-,e-
