@@ -1,0 +1,7 @@
+"wmctrl -xa chrome"
+  m:0xc + c:31
+  Control+Alt + u
+
+"wmctrl -xa terminal"
+    m:0xc + c:45
+    Control+Alt + e
