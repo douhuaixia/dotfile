@@ -5,3 +5,9 @@
 "wmctrl -xa terminal"
     m:0xc + c:45
     Control+Alt + e
+"wmctrl -xa evince"
+    m:0xc + c:57
+    Control+Alt + k
+"wmctrl -xa telegram"
+    m:0xc + c:29
+    Control+Alt + j
