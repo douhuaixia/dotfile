@@ -19,6 +19,7 @@ prefix+n  跳转到下一个会话
 prefix+<space>+<space>  在两个会话间来回跳转
 prefix+|  竖直分割窗口
 prefix+_  水平分割窗口
+ctrl+<space>+p 粘贴
 
 vim中(vim-nox)
 选中复制区域后使用 <space> + y复制到系统剪切板， 之后<space> + p粘贴
@@ -35,6 +36,19 @@ ctrl+alt+j  telegram
 ctrl+alt+m 切换窗口最大化状态
 ctrl+alt+H 隐藏窗口
 ctrl+alt+/ 关闭窗口
+
+tags + cscope
+
+代码目录执行cs
+文件中执行  cs add path/to/cscope.out   代码目录
+related file   .vimrc-> set tags = ...         /usr/local/bin/cs
+
+
+
+
+
+
+
 
 
 

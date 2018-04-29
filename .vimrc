@@ -4,6 +4,8 @@ set noundofile
 set ignorecase
 
 "tags文件生成位置为~/tags文件夹
+set tags=./tags;,tags
+
 "cscope文件也在该文件夹下
 
 nmap<C-n> :cnext<CR>
