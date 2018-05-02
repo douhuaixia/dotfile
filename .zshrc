@@ -175,6 +175,8 @@ bindkey ' ' magic-space # do history expansion on space
 
 bindkey "^F" end-of-line
 bindkey "^E" forward-char		#补全
+bindkey "^H" backward-char
+bindkey "^B" backward-delete-char
 
 
 # Replace standard history-incremental-search-{backward,forward} bindings.
