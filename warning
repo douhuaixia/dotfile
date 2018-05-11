@@ -42,8 +42,11 @@ tags + cscope
 代码目录执行cs
 文件中执行  cs add path/to/cscope.out   代码目录
 related file   .vimrc-> set tags = ...         /usr/local/bin/cs
+----------------------------------------------------
 
+eclipse install
 
+vim ~/profile 加入java环境配置(桌面图形启动)
 
 
 
